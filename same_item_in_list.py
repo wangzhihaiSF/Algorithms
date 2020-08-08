@@ -11,7 +11,7 @@ class Solution(object):
         for i in nums1:
             if i in nums2:
                 new_list.append(i)
-                nums2.remove(i)
+                nums2.remove(i)  # 避免两个集合中相同元素次数不一致，添加重复
         return new_list
 
     # 新奇的脑回路
