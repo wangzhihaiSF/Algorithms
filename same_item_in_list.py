@@ -1,6 +1,4 @@
-import time, datetime
-
-
+# leetcode 350, 求交集
 class Solution(object):
     # 自己想的
     def intersect1(self, nums1, nums2):
@@ -18,13 +16,14 @@ class Solution(object):
 
     # 新奇的脑回路
     def intersect2(self, nums1, nums2):
-        same_item = set(nums1) & set(nums2)
-        for i in same_item:
-            same_item += [i] * min(nums1.count(i), nums2.count(i))
-        return same_item
+        inter = set(nums1) & set(nums2)
+        l = []
+        for i in inter:
+            l += [i] * min(nums1.count(i), nums2.count(i))
+        return l
 
     # 双指针
-    def intersect3(self, nums1: [int], nums2: [int]) -> [int]:
+    def intersect3(self, nums1, nums2):
         nums1.sort()
         nums2.sort()
         r = []
@@ -42,18 +41,14 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    start_time = datetime.datetime.now()
-    print(start_time)
-    so = Solution()
-    n1, n2 = [1, 2, 2, 1], [2, 2]
-    n = 0
-    while n < 100:
-        result =so.intersect1(n1, n2)
-        n += 1
-    # result = set(n1) & set(n2)
-    end_time = datetime.datetime.now()
-    print(end_time)
-    change_time = end_time - start_time
-    print(result)
-    print(change_time)
 
+    so = Solution()
+    n1, n2 = [1, 2, 2, 1, 3], [2, 2, 1]
+    # result1 = so.intersect1(n1, n2)
+    # result2 = so.intersect2(n1, n2)
+    result3 = so.intersect3(n1, n2)
+    # print(result1)
+    # print(result2)
+    print(result3)
+    # print(n1.count(2))
+    #
