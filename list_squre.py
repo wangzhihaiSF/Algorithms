@@ -1,16 +1,15 @@
-
-def sortedSquares(A):
+def sorted_squares(a):
     """
-    :type A: List[int]
+    :type a: List[int]
     :rtype: List[int]
     """
-    B = []
-    for i in A:
-        B.append(i**2)
-    B.sort()
-    return B
+    b = []
+    for i in a:
+        b.append(i ** 2)
+    b.sort()
+    return b
 
 
 if __name__ == '__main__':
-    a = [-4,-1,0,3,10]
-    print(sortedSquares(a))
+    a = [-4, -1, 0, 3, 10]
+    print(sorted_squares(a))

@@ -5,13 +5,14 @@
 
 def sort_input():
     input_dict = {}
-    input_item = input("请输入一长串字符，我们将统计相同的字符数量：")
-    for i in input_item:
+    input_str = input("请输入一长串字符，我们将统计相同的字符数量：")
+    for i in input_str:
         if i not in input_dict:
             input_dict[i] = 1
         else:
             input_dict[i] += 1
     return_list = sorted(input_dict.items(), key=lambda item: item[1], reverse=True)
+    print(return_list)
     return dict(return_list)
 
 

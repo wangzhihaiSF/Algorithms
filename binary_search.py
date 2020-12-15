@@ -1,6 +1,8 @@
 from bubble_sort import bubble_sort
 
-
+"""
+二进制查找
+"""
 def binary_search(sequence, number, lower, upper):
     if number in sequence:
         if lower == upper:

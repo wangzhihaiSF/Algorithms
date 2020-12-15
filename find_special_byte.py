@@ -2,7 +2,7 @@ import re
 
 
 def find_special_character(info):
-    result = re.findall(".*?(\W)|_", info)
+    result = re.findall(".*?(\W)", info)
     return result
 
 
